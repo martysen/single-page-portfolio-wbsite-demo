@@ -1,0 +1,428 @@
+/* Import font styling from google fonts - src: fonts.google.com */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/* decision making for color palette 
+    requirements ~ about 5 categories. add more if needed: 
+    primary bg color: #2D2A32 (raisin black)
+    2ndary bg color: #B07156 (brown sugar)
+    primary font color: #F4F4F9 (ghost white)
+    2ndary font color: #E2C044 (old gold)
+    backup color(fr buttons and transition etc): #DE6B48 (burnt sienna)
+    goto : https://coolors.co/ and start generator 
+    Now create all the variables below selector. 
+
+*/
+
+/* reset all default css from browsers */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  --bg-primary: #2d2a32; /*to invoke in value of a css property write: var(--bg-primary)*/
+  --bg-secondary: #b07156;
+  --font-color-primary: #f4f4f9;
+  --font-color-secondary: #e2c044;
+  --backup-color: #de6b48;
+}
+
+/* start of desktop first styling. considering width of screen about 1100px+ */
+body {
+  height: 100vh;
+  background: var(--bg-primary);
+}
+
+/* style header and navbar */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  padding: 0 50px;
+}
+
+.navbar h2 {
+  color: var(--font-color-primary);
+  font-weight: 600;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar ul li {
+  list-style: none;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: var(--font-color-secondary);
+  font-size: 16px;
+  margin-right: 25px;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li:hover a {
+  color: var(--font-color-primary);
+}
+
+.navbar ul li:last-child a {
+  margin: 0;
+}
+
+.hire-btn {
+  background: var(--backup-color);
+  color: var(--font-color-primary);
+  padding: 6px 30px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.hire-btn:hover {
+  background: var(--font-color-secondary);
+  color: var(--bg-primary);
+}
+
+/* style hero section */
+
+.main {
+  height: 640px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main h4 {
+  font-size: 32px;
+  color: var(--font-color-primary);
+  font-weight: 600;
+}
+
+.main h4 span {
+  color: var(--font-color-secondary);
+  text-decoration: underline;
+}
+
+.main p.title {
+  font-size: 44px;
+  font-weight: 600;
+  color: var(--font-color-primary);
+  margin-top: 8px;
+}
+
+.main p.subtitle {
+  font-size: 16px;
+  color: var(--font-color-primary);
+  margin-top: 20px;
+}
+
+.main img {
+  width: 200px;
+  height: 150px;
+  margin-top: 100px;
+  border-radius: 65%;
+}
+
+/* style first section after hero section - services assurance section */
+
+.services-assurance {
+  margin-top: 50px;
+  padding: 0 50px;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 24px;
+}
+
+.services-assurance .item {
+  background: var(--bg-secondary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  border-radius: 10px;
+  padding: 0 30px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.services-assurance .item:hover {
+  border-color: var(--font-color-primary);
+}
+
+.services-assurance .item .icon {
+  width: 46px;
+  height: 46px;
+  background: var(--font-color-secondary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.services-assurance .item:hover .icon {
+  background: var(--font-color-primary);
+}
+
+.services-assurance .item .icon i {
+  font-size: 30px;
+}
+
+.services-assurance .item .info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.services-assurance .item .info h3 {
+  color: var(--font-color-secondary);
+  font-size: 28px;
+}
+
+.services-assurance .item .info p {
+  color: var(--font-color-primary);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.services-assurance .item > i {
+  color: var(--bg-primary);
+  font-size: 30px;
+  transition: color 0.3s ease;
+}
+
+.services-assurance .item:hover > i {
+  color: var(--font-color-primary);
+}
+
+.section-separator-title {
+  margin: 50px 50px 30px;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.08);
+  display: inline-block;
+  color: var(--font-color-secondary);
+  border-radius: 12px;
+  font-size: 20px;
+}
+
+/* style 2nd subsection after hero section - about me  */
+.about-me {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 80px;
+  padding: 0 50px;
+}
+
+.about-me .info h3 {
+  color: var(--backup-color);
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.about-me .info p {
+  color: var(--font-color-primary);
+  font-size: 14px;
+}
+
+.about-me .info button {
+  margin-top: 30px;
+}
+
+.about-me img {
+  width: 300px;
+}
+
+.skills {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 50px;
+}
+
+.skills .left {
+  width: 680px;
+}
+
+.skills .left .info h3 {
+  color: var(--backup-color);
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.skills .left .info p {
+  color: var(--font-color-primary);
+  font-size: 14px;
+}
+
+.skills .left button {
+  margin-top: 30px;
+}
+
+.skills .right {
+  width: 420px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skills .right .item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--font-color-secondary);
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+}
+
+.skills .right .item i {
+  font-size: 34px;
+  color: var(--bg-primary);
+}
+
+/* start style for footer  */
+footer {
+  position: relative;
+  background: var(--bg-secondary);
+  padding: 80px 50px 40px;
+  margin-top: 100px;
+}
+
+footer .start {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute; /* position is absolute relative to the parent which is the footer itself */
+  background-color: var(--font-color-secondary);
+  padding: 30px 25px;
+  border-radius: 15px;
+  width: 70%;
+  top: -16%; /* adjusting absolute positioning values relative to the parent i.e. the footer*/
+  left: 15%; /* adjusting absolute positioning values relative to the parent i.e. the footer*/
+}
+
+footer .start p {
+  font-size: 13px;
+  width: 35%;
+}
+
+footer .start button {
+  background: transparent;
+  border: 1px solid var(--bg-primary);
+  cursor: pointer;
+  padding: 8px 20px;
+  border-radius: 100px;
+  transition: all 0.3s ease;
+}
+
+footer .start button:hover {
+  background-color: var(--backup-color);
+  border-color: var(--bg-primary);
+}
+
+footer .cols {
+  display: flex;
+  align-items: flex-start;
+}
+
+footer .cols .about-col {
+  flex: 2; /*determines starting width of item.*/
+}
+
+footer .cols .about-col h3 {
+  color: var(--font-color-primary);
+  margin-bottom: 20px;
+}
+
+footer .cols .about-col p {
+  color: var(--bg-primary);
+  font-size: 15px;
+}
+
+footer .cols .links-col {
+  flex: 3;
+}
+
+footer .cols .links-col h4,
+footer .cols .news-col h4 {
+  color: #f5f7f8;
+  margin-bottom: 20px;
+}
+
+footer .cols .links-col a {
+  display: block;
+  text-decoration: none;
+  color: var(--bg-primary);
+  font-size: 14px;
+  line-height: 26px;
+  transition: color 0.3s ease;
+}
+
+footer .cols .links-col a:hover {
+  color: var(--font-color-secondary);
+}
+
+footer .cols .news-col {
+  flex: 3;
+}
+
+footer .cols .news-col p {
+  color: var(--bg-primary);
+  font-size: 15px;
+}
+
+footer .cols .news-col form {
+  width: 100%;
+  margin-top: 20px;
+  position: relative;
+}
+
+footer .cols .news-col form input {
+  width: 100%;
+  background: var(--font-color-secondary);
+  border: none;
+  padding: 13px;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+footer .cols .news-col form button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  background: var(--bg-primary);
+  border: none;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 1%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+footer .cols .news-col form button:hover {
+  background: var(--font-color-primary);
+}
+
+footer .cols .news-col form button i {
+  font-size: 26px;
+  color: var(--font-color-primary);
+}
+
+footer .cols .news-col form button:hover i {
+  color: var(--bg-primary);
+}
+/* Start of responsive styling from here  */
