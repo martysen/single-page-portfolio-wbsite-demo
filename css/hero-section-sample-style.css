@@ -1,0 +1,83 @@
+/* // add any external fonts you want to add */
+
+/* reset all browser defaults */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Tahoma, sans-serif;
+  overflow: hidden;
+}
+
+/* add desktop styling */
+
+video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+header {
+  position: absolute; /*From this line to the next 3 lines is another way for concept -  "center a div"*/
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  color: #fff;
+  text-align: center;
+}
+
+header h1 {
+  font-weight: 600;
+  font-size: 4rem;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+header span {
+  font-weight: 800;
+  font-size: 6rem;
+  display: block;
+}
+
+.description {
+  position: absolute;
+  bottom: 2%;
+  width: 50%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: #000;
+  border-radius: 15px;
+  opacity: 0.5;
+  padding: 1.5rem;
+}
+
+.description p {
+  color: #fff;
+  text-align: justify;
+  max-width: 42rem;
+  margin-inline: auto;
+  line-height: 1.5;
+}
+
+.copyright {
+  font-size: 0.65rem;
+}
+
+.copyright a {
+  color: #fff;
+  text-underline-offset: 1.8px;
+}
+
+/* responsive styling */
+@media screen and (max-width: 1100px) {
+  .description {
+    position: absolute;
+    width: 91vw;
+    bottom: 0;
+    border-radius: 20px 20px 0 0;
+    margin: auto;
+    padding: 0.6rem 1.5rem;
+  }
+}
