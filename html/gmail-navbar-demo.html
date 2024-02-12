@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gmail Navbar Clone Demo</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/gmail-navbar-demo-style.css" />
+
+    <!-- Google Icons : https://fonts.google.com/icons : Goto Developers Guide : Use in the Web Section and Cpy paste content here-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <button onclick="toggleMenu()" class="burger material-symbols-outlined">
+      menu
+    </button>
+
+    <nav class="navbar">
+      <div class="logo">
+        <img src="../assets/Gmail-Logo.wine.png" alt="gmail logo example" />
+        <span>Gmail</span>
+      </div>
+
+      <div class="search">
+        <span class="material-symbols-outlined"> search </span>
+        <input
+          type="text"
+          spellcheck="false"
+          class="search"
+          id="search"
+          placeholder="Search mail"
+        />
+      </div>
+
+      <nav>
+        <button class="material-symbols-outlined">Help</button>
+        <button class="material-symbols-outlined">Settings</button>
+        <button class="material-symbols-outlined">Apps</button>
+        <img src="../assets/channel-logo.jpg" alt="a youtube channel-logo" />
+      </nav>
+    </nav>
+
+    <!-- javascript here; after page loads -->
+    <script type="text/javascript">
+      const toggleMenu = () => document.body.classList.toggle("open");
+    </script>
+  </body>
+</html>
